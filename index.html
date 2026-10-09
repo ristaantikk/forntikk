@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 💗</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #ffb6d5);
+    overflow-x: hidden;
+}
+
+.card {
+    width: 100%;
+    max-width: 390px;
+    padding: 30px 23px;
+    background: #fffafd;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 35px #d65b9140;
+    animation: muncul 0.6s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.emoji {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #e75480;
+    font-size: 27px;
+}
+
+p {
+    color: #765267;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.pesan {
+    background: #fff0f6;
+    border-radius: 17px;
+    padding: 18px;
+    margin: 20px 0;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 20px;
+    margin: 7px 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.utama {
+    background: #e75480;
+    color: white;
+}
+
+.kedua {
+    background: #ffe0ed;
+    color: #c63c70;
+}
+
+#hasil {
+    color: #e75480;
+    font-weight: bold;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.footer {
+    color: #c58aa4;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+.halaman {
+    display: none;
+}
+
+.halaman.aktif {
+    display: block;
+}
+
+.hati {
+    position: fixed;
+    top: -30px;
+    color: #ff5b96;
+    animation: jatuh 5s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes jatuh {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- HALAMAN 1 -->
+    <section class="halaman aktif" id="halaman1">
+        <div class="emoji">💌🐰</div>
+        <h1>Haii, kamuuu!</h1>
+
+        <p>
+            Aku punya sesuatu buat kamu nihh.
+            <br>
+            Jangan langsung pergi yaa 🥺💗
+        </p>
+
+        <div class="pesan">
+            <p>
+                Ada yang mau aku omongin,
+                dan kali ini aku serius.
+                Baca sampai selesai yaa? 🫶🏻
+            </p>
+        </div>
+
+        <button class="utama" onclick="pindah(2)">
+            Buka pesannya 💗
+        </button>
+
+        <div class="footer">halaman 1 dari 3 ♡</div>
+    </section>
+
+
+    <!-- HALAMAN 2 -->
+    <section class="halaman" id="halaman2">
+        <div class="emoji">🥺💗</div>
+        <h1>I'm Sorry, Ya...</h1>
+
+        <div class="pesan">
+            <p>
+                Aku mau minta maaf yaa karena selama ini
+                aku sering bikin kamu BM, kesel, atau
+                capek sama sikap aku.
+                <br><br>
+
+                Aku sadar terkadang aku susah dimengerti
+                dan belum bisa memahami perasaan kamu
+                dengan baik.
+                <br><br>
+
+                Aku nggak bermaksud bikin kamu sedih.
+                Maaf kalau sikap aku bikin kamu kepikiran
+                atau ngerasa nggak nyaman.
+                <br><br>
+
+                Aku bakal belajar buat lebih ngerti kamu,
+                lebih jaga sikap, dan memperbaiki diri.
+                Aku nggak mau cuma minta maaf,
+                tapi juga mau buktiin lewat sikap aku.
+                <br><br>
+
+                Makasih yaa ntikk karena maafin kay terus.
+                Maaf kalau aku sering bikin BM lagi
+                dan lagi. 🥹🫶🏻
+            </p>
+        </div>
+
+        <button class="kedua" onclick="pindah(1)">
+            ⬅ Kembali
+        </button>
+
+        <button class="utama" onclick="pindah(3)">
+            Lanjut yaa 💌
+        </button>
+
+        <div class="footer">halaman 2 dari 3 ♡</div>
+    </section>
+
+
+    <!-- HALAMAN 3 -->
+    <section class="halaman" id="halaman3">
+        <div class="emoji">🧸💕</div>
+        <h1>Baikan, Yuk?</h1>
+
+        <p>
+            kay harap ntikk ga capee ya 
+            karenaa kay bikin marah terus
+            <br>
+            kalo kay adaa salah bilang yaa ntik 
+        </p>
+
+        <div class="pesan">
+            <p>
+                Kamu itu berarti buat aku.
+                Aku seneng bisa kenal kamu,
+                dan aku nggak mau terus-terusan
+                bikin kamu kecewa.
+                <br><br>
+                <b>I'm sorry, my favorite person. 💗</b>
+            </p>
+        </div>
+
+        <p>Mau maafin aku nggak nihh? 🥺</p>
+
+        <button class="utama" onclick="maafin()">
+            Iya, aku maafin 💗
+        </button>
+
+        <button class="kedua" onclick="belum()">
+            Masih BM 😤
+        </button>
+
+        <div id="hasil"></div>
+
+        <button class="kedua" onclick="pindah(2)">
+            ⬅ Baca lagi
+        </button>
+
+        <div class="footer">halaman 3 dari 3 ♡</div>
+    </section>
+
+</div>
+
+<script>
+function pindah(nomor) {
+    document.querySelectorAll(".halaman").forEach(function(el) {
+        el.classList.remove("aktif");
+    });
+
+    document.getElementById("halaman" + nomor)
+        .classList.add("aktif");
+
+    window.scrollTo(0, 0);
+}
+
+function maafin() {
+    document.getElementById("hasil").innerHTML =
+        "YAYYY 😭💗 makasih udah maafin aku! " +
+        "Semoga kita bisa baikan dan lebih ngerti satu sama lain 🫂💕";
+}
+
+function belum() {
+    document.getElementById("hasil").innerHTML =
+        "Gapapaa, aku ngerti kok 🥺💗 " +
+        "Aku tunggu sampai kamu siap buat baikan, yaa.";
+}
+
+// Animasi hati berjatuhan
+setInterval(function() {
+    const hati = document.createElement("div");
+    hati.className = "hati";
+    hati.innerHTML = Math.random() > 0.5 ? "💗" : "♡";
+    hati.style.left = Math.random() * 100 + "vw";
+    hati.style.fontSize = (15 + Math.random() * 15) + "px";
+    document.body.appendChild(hati);
+
+    setTimeout(function() {
+        hati.remove();
+    }, 5000);
+}, 500);
+</script>
+
+</body>
+</html>
